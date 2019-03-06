@@ -11,7 +11,7 @@ function updateCompScore() {
 }
 
 function updatePlayerScore() {
-    var playScore =$('#player-score')
+    var playScore = $('#player-score')
     playerScore++
     console.log(playerScore + "p")
     playScore.text(playerScore)
@@ -73,6 +73,15 @@ $('#p').on('click', function() {
       updateCompScore(0)
       break
   }
+})
+
+$('#new-btn').on('click', function() {
+    var compScore = $('#comp-score')
+    var playScore = $('#player-score')
+    playerScore = 0;
+    computerScore = 0;
+    compScore.text(computerScore)
+    playScore.text(playerScore)
 })
 
 $('#s').on('click', function() {
