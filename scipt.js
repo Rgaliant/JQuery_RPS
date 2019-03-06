@@ -1,6 +1,15 @@
 $(document).ready( function() {
+  
 
-
+function updateScore(val) {
+  var playerScore = $('#player-score')
+  var computerScore = $('#comp-score')
+    if(val == 1)
+      var playerScore = playerScore.text(+1)
+    else
+      var computerScore = computerScore.text(+1)
+      
+}
 
   $('#r').on('click', function() {
     var winnerIs = $('.winner-is')
@@ -19,11 +28,13 @@ $(document).ready( function() {
         enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/scissors.png" alt="scissors" ></div>')
         winnerIs.replaceWith('<div class="winner-is">PLAYER WINS!</div>')
         var combo = ""
+        updateScore(1)
         break
       case "rp":
         enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/paper.png" alt="paper" ></div>')
         winnerIs.replaceWith('<div class="winner-is">COMPUTER WINS!</div>')
         var combo = ""
+        updateScore(0)
         break
     }
 })
@@ -45,11 +56,13 @@ $('#p').on('click', function() {
       enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/rock.png" alt="rock" ></div>')
       winnerIs.replaceWith('<div class="winner-is">PLAYER WINS!</div>')
       var combo = ""
+      updateScore(1)
       break
     case "ps":
       enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/scissors.png" alt="scissors" ></div>')
       winnerIs.replaceWith('<div class="winner-is">COMPUTER WINS!</div>')
       var combo = ""
+      updateScore(0)
       break
   }
 })
@@ -71,11 +84,13 @@ $('#s').on('click', function() {
       enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/paper.png" alt="paper" ></div>')
       winnerIs.replaceWith('<div class="winner-is">PLAYER WINS!</div>')
       var combo = ""
+      updateScore(1)
       break
     case "sr":
       enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/rock.png" alt="rock" ></div>')
       winnerIs.replaceWith('<div class="winner-is">COMPUTER WINS!</div>')
       var combo = ""
+      updateScore(0)
       break
   }
 })
