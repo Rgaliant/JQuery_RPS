@@ -1,14 +1,22 @@
+var playerScore = 0;
+var computerScore = 0;
+
 $(document).ready( function() {
   
+function updateCompScore() {
+    var compScore = $('#comp-score')
+    computerScore++
+    console.log(computerScore + "com")
+    compScore.text(computerScore)
+}
 
-function updateScore(val) {
-  var playerScore = $('#player-score')
-  var computerScore = $('#comp-score')
-    if(val == 1)
-      var playerScore = playerScore.text(+1)
-    else
-      var computerScore = computerScore.text(+1)
-      
+function updatePlayerScore() {
+    var playScore =$('#player-score')
+    playerScore++
+    console.log(playerScore + "p")
+    playScore.text(playerScore)
+
+       
 }
 
   $('#r').on('click', function() {
@@ -28,13 +36,13 @@ function updateScore(val) {
         enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/scissors.png" alt="scissors" ></div>')
         winnerIs.replaceWith('<div class="winner-is">PLAYER WINS!</div>')
         var combo = ""
-        updateScore(1)
+        updatePlayerScore()
         break
       case "rp":
         enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/paper.png" alt="paper" ></div>')
         winnerIs.replaceWith('<div class="winner-is">COMPUTER WINS!</div>')
         var combo = ""
-        updateScore(0)
+        updateCompScore()
         break
     }
 })
@@ -56,13 +64,13 @@ $('#p').on('click', function() {
       enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/rock.png" alt="rock" ></div>')
       winnerIs.replaceWith('<div class="winner-is">PLAYER WINS!</div>')
       var combo = ""
-      updateScore(1)
+      updatePlayerScore()
       break
     case "ps":
       enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/scissors.png" alt="scissors" ></div>')
       winnerIs.replaceWith('<div class="winner-is">COMPUTER WINS!</div>')
       var combo = ""
-      updateScore(0)
+      updateCompScore(0)
       break
   }
 })
@@ -84,13 +92,13 @@ $('#s').on('click', function() {
       enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/paper.png" alt="paper" ></div>')
       winnerIs.replaceWith('<div class="winner-is">PLAYER WINS!</div>')
       var combo = ""
-      updateScore(1)
+      updatePlayerScore()
       break
     case "sr":
       enemyChoice.replaceWith('<div class="enemy-decision" id="enemy-choice"><img src="images/rock.png" alt="rock" ></div>')
       winnerIs.replaceWith('<div class="winner-is">COMPUTER WINS!</div>')
       var combo = ""
-      updateScore(0)
+      updateCompScore()
       break
   }
 })

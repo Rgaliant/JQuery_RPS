@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>JQRPS</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div id="game-container">
     
-    <h3 class="header"> <span class="winner-is"></span></h3>
+    <h3 class="header"> </h3>
           <div class="choices-container">
             <div class="player-btn" id="r">
                 <img src="images/rock.png" alt="rock">
@@ -22,12 +22,13 @@
                 <img src="images/scissors.png" alt="scissors" >
             </div>
           </div>
+          <br />
         <div class="score-board" style="text-align:center;">
-          <span id="player-score">0</span>:<span id="comp-score">0</span>
-            
+            <div id="user-label" class="badge">User</div> <span id="player-score"> 0  </span>:<span id="comp-score">  0 </span><div id="computer-label" class="badge">Comp</div>
+           
           
         </div>
-    <br />
+        <h2><span class="winner-is"></span></h2>
     <div class="enemy-decision" id="enemy-choice">
         Enemy chooses...
     </div>
