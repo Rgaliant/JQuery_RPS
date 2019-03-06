@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    
+    <h3 class="header"> <span class="winner-is"></span></h3>
+          <div class="choices-container">
+            <div class="player-btn" id="r">
+                <img src="images/rock.png" alt="rock">
+            </div>
+            <div class="player-btn" id="p">
+                <img src="images/paper.png" alt="paper" >
+            </div>
+            <div class="player-btn" id="s">
+                <img src="images/scissors.png" alt="scissors" >
+            </div>
+          </div>
+        <div class="score-board">
+          <h4 style="text-align:center;">Make your move!</h4>
+        </div>
+    <br />
+    <div class="enemy-decision" id="enemy-choice">
+        Enemy chooses...
+    </div>
+    <br />
+    <br />
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="scipt.js"></script>
+</body>
+</html>

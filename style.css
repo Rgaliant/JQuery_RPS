@@ -1,0 +1,35 @@
+.game-container {
+  width: 85%;
+  height: 50%;
+}
+
+.choices-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#r {
+  max-width: 10%;
+}
+#p {
+  max-width: 10%;
+}
+
+.player-btn:hover {
+  cursor: pointer;
+}
+
+.enemy-decision {
+  display: flex;
+  justify-content: center;
+}
+
+.winner-is {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #a7a6a6;
+}
